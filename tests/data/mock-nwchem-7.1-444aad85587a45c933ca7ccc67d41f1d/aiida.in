@@ -1,0 +1,22 @@
+echo
+start aiida_calc
+title "AiiDA NWChem calculation"
+memory 2000.0 mb
+geometry units angstroms noautoz noautosym
+  system crystal
+    lat_a 4.0
+    lat_b 4.0
+    lat_c 4.0
+    alpha 90.0
+    beta  90.0
+    gamma 90.0
+  end
+  O 0.0 0.0 0.0
+  H 0.0 0.3576070225 -0.276788165
+  H 0.0 -0.3576070225 -0.276788165
+end
+basis
+  H library sto-3g
+  O library sto-3g
+end
+task dft

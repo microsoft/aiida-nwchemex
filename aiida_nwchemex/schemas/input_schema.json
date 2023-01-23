@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "units": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "coordinates",
+        "units"
+      ]
+    },
+    "basis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "basisset": {
+          "type": "string"
+        },
+        "gaussian_type": {
+          "type": "string"
+        },
+        "atom_basis": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "basisset"
+      ]
+    },
+    "common": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxiter": {
+          "type": "integer"
+        },
+        "debug": {
+          "type": "boolean"
+        },
+        "output_file_prefix": {
+          "type": "string"
+        }
+      }
+    },
+    "SCF": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tol_int": {
+          "type": "number"
+        },
+        "tol_lindep": {
+          "type": "number"
+        },
+        "conve": {
+          "type": "number"
+        },
+        "convd": {
+          "type": "number"
+        },
+        "diis_hist": {
+          "type": "integer"
+        },
+        "tilesize": {
+          "type": "integer"
+        },
+        "charge": {
+          "type": "integer"
+        },
+        "scf_type": {
+          "type": "string"
+        },
+        "multiplicity": {
+          "type": "integer"
+        },
+        "lshift": {
+          "type": "integer"
+        },
+        "force_tilesize": {
+          "type": "boolean"
+        },
+        "alpha": {
+          "type": "number"
+        },
+        "nnodes": {
+          "type": "integer"
+        },
+        "writem": {
+          "type": "integer"
+        },
+        "restart": {
+          "type": "boolean"
+        },
+        "noscf": {
+          "type": "boolean"
+        },
+        "debug": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CD": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "diagtol": {
+          "type": "number"
+        },
+        "max_cvecs": {
+          "type": "integer"
+        }
+      }
+    },
+    "CC": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "threshold": {
+          "type": "number"
+        },
+        "writet": {
+          "type": "boolean"
+        },
+        "debug": {
+          "type": "boolean"
+        },
+        "GFCCSD": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "gf_ip": {
+              "type": "boolean"
+            },
+            "gf_p_oi_range": {
+              "type": "integer"
+            },
+            "gf_eta": {
+              "type": "number"
+            },
+            "gf_threshold": {
+              "type": "number"
+            },
+            "gf_maxiter": {
+              "type": "integer"
+            },
+            "gf_ngmres": {
+              "type": "integer"
+            },
+            "gf_damping_factor": {
+              "type": "number"
+            },
+            "gf_omega_min_ip": {
+              "type": "number"
+            },
+            "gf_omega_max_ip": {
+              "type": "number"
+            },
+            "gf_omega_min_ip_e": {
+              "type": "number"
+            },
+            "gf_omega_max_ip_e": {
+              "type": "number"
+            },
+            "gf_omega_delta": {
+              "type": "number"
+            },
+            "gf_omega_delta_e": {
+              "type": "number"
+            },
+            "gf_cs": {
+              "type": "boolean"
+            },
+            "gf_orbitals": {
+              "type": "array"
+            },
+            "gf_extrapolate_level": {
+              "type": "integer"
+            },
+            "gf_analyze_level": {
+              "type": "integer"
+            },
+            "gf_analyze_num_omega": {
+              "type": "integer"
+            },
+            "gf_analyze_omega": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "gf_itriples": {
+              "type": "boolean"
+            }
+          }
+        },
+        "lshift": {
+          "type": "integer"
+        },
+        "ndiis": {
+          "type": "integer"
+        },
+        "ccsd_maxiter": {
+          "type": "integer"
+        },
+        "printtol": {
+          "type": "number"
+        },
+        "readt": {
+          "type": "boolean"
+        },
+        "writev": {
+          "type": "boolean"
+        },
+        "writet_iter": {
+          "type": "integer"
+        },
+        "profile_ccsd": {
+          "type": "boolean"
+        },
+        "tilesize": {
+          "type": "integer"
+        },
+        "force_tilesize": {
+          "type": "boolean"
+        },
+        "CCSD(T)": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ngpu": {
+              "type": "integer"
+            },
+            "ccsdt_tilesize": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "basis",
+    "common",
+    "geometry"
+  ]
+}

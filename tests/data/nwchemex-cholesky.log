@@ -1,0 +1,187 @@
+{
+  "CC": {
+    "readt": true,
+    "writet": true,
+    "writev": false,
+    "CCSD(T)": {
+      "ngpu": 0,
+      "ccsdt_tilesize": 40
+    },
+    "threshold": 1e-06,
+    "ccsd_maxiter": 100
+  },
+  "CD": {
+    "diagtol": 1e-06
+  },
+  "SCF": {
+    "convd": 1e-07,
+    "conve": 1e-08,
+    "noscf": true,
+    "charge": 0,
+    "restart": true,
+    "tol_int": 1e-20,
+    "scf_type": "unrestricted",
+    "diis_hist": 10,
+    "tol_lindep": 1e-05,
+    "multiplicity": 1
+  },
+  "basis": {
+    "sphcart": "spherical",
+    "basisset": "cc-pvdz"
+  },
+  "common": {
+    "maxiter": 50
+  },
+  "geometry": {
+    "units": "au",
+    "coordinates": [
+      "O 0.0 0.0 0.0",
+      "H 1.8897261254578281 0.0 0.0",
+      "H 0.0 1.8897261254578281 0.0"
+    ]
+  },
+  "GW": null
+}
+
+Common Options
+{
+ maxiter    = 50
+ basis      = cc-pvdz spherical
+ geom_units = au
+ debug      = false
+}
+
+Number of nodes, mpi ranks per node provided: 1, 23
+Number of nodes, mpi ranks per node used for SCF calculation: 1, 23
+
+SCF Options
+{
+ charge       = 0
+ multiplicity = 1
+ level shift  = 0
+ tol_int      = 1e-20
+ tol_lindep   = 1e-05
+ conve        = 1e-08
+ convd        = 1e-07
+ diis_hist    = 10
+ AO_tilesize  = 30
+ writem       = 10
+ scf_type     = unrestricted
+ scalapack_nb = 64
+ restart_size = 2000
+ restart      = true
+ debug        = false
+ noscf        = true
+}
+
+Number of basis functions = 24
+
+Total number of electrons = 10
+  # of alpha electrons    = 5
+  # of beta electons      = 5
+
+Nuclear repulsion energy  = 8.84102016483414
+
+# of {all,non-negligible} shell-pairs = {78,78}
+Number of AO tiles = 12
+
+Time for initial setup: 0.06 secs
+
+Time for computing 1-e integrals T, V, S: 0.05 secs
+Time for computing orthogonalizer: 0.08 secs
+
+pre-computing data for Schwarz bounds...
+Time to compute schwarz matrix: 0.03 secs
+Reading movecs and density files ... done
+Total Time to compute initial guess: 0.11 secs
+
+
+ SCF iterations
+-----------------------------------------------------------------
+ Iter     Energy            E-Diff        Time(s)
+-----------------------------------------------------------------
+Total HF energy after restart: -76.016789471601668993
+   1  -76.0167894716     0.00e+00        0.0
+
+** Total SCF energy = -76.0167894716017
+
+Nuclear repulsion energy = 8.841020164834140
+#electrons        = 10.000000000000014
+1e energy kinetic = 75.8583305951628120
+1e energy N-e     = -198.3220995409760121
+1e energy         = -122.4637689458132570
+2e energy         = 37.6059593093774112
+
+Time taken for Hartree-Fock: 0.5635706980000000 secs
+
+CCSD Options
+{
+ ndiis                = 5
+ printtol             = 0.05
+ threshold            = 1e-06
+ tilesize             = 50
+ ccsd_maxiter         = 100
+ freeze_core          = 0
+ freeze_virtual       = 0
+ itilesize            = 1000
+ readt                = true
+ writet               = true
+ writev               = false
+ writet_iter          = 5
+ profile_ccsd         = false
+ balance_tiles        = true
+ eom_nroots           = 1
+ eom_microiter        = 50
+ eom_threshold        = 1e-06
+ debug                = false
+}
+
+#occupied, #virtual = 10, 38
+
+CD Options
+{
+ diagtol          = 1e-06
+ max_cvecs_factor = 12
+ debug            = false
+}
+
+-----------------------------------------------------
+Begin 2-index transformation ...
+
+nAO, nMO, nelectrons = 24, 48, 10
+n_occ_alpha, n_vir_alpha, n_occ_beta, n_vir_beta = 5,19,5,19
+
+Time taken for Fao->Fmo transform: 0.000232201 secs
+
+-----------------------------------------------------
+Begin Cholesky Decomposition ...
+Number of cholesky vectors = 185
+
+Time taken for cholesky decomp: 0.06976893000000001 secs
+Total Time for constructing CholVpr: 0.004822337 secs
+    --> Time for 2-step contraction:   0.0001469 secs
+
+Time for ga_chol_mo -> CholVpr_tamm conversion: 0.003106924 secs
+
+Total Time taken for CD (+SVD): 0.530532333 secs
+
+----------------------------
+scf_type = unrestricted
+Open-Shell SCF
+nbf = 24
+nbf_orig = 24
+n_lindep = 0
+focc = 2
+nmo = 48
+nocc = 10
+nvir = 38
+n_occ_alpha = 5
+n_vir_alpha = 19
+n_occ_beta = 5
+n_vir_beta = 19
+nelectrons = 10
+nelectrons_alpha = 5
+nelectrons_beta = 5
+n_frozen_core = 0
+n_frozen_virtual = 0
+----------------------------
