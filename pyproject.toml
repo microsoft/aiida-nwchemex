@@ -51,7 +51,7 @@ tests = [
     "pytest~=7.2",
     "ase~=3.22",
     "pytest-cov",
-    "aiida-testing @git+https://github.com/aiidateam/aiida-testing@43f838a7676185408b9122fec6a52e1a8034e68d",
+    "aiida-testing @git+https://github.com/aiidateam/aiida-testing@2bf9dfaef5d7658b47f5b31dd1ce81da5c43c53c",
 ]
 pre-commit = [
     "pre-commit~=2.2",
